@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Ramagiri Ranjith</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="stylesheet.css">
+
+    <style>
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            z-index: 10;
+            position: relative;
+        }
+
+        nav .menu-toggle {
+            display: none;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            nav .menu-toggle {
+                display: block;
+            }
+
+            nav ul li a {
+                text-decoration: none !important;
+            }
+
+            nav ul {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background: rgba(0, 0, 0, 0.7);
+                width: 100%;
+                flex-direction: column;
+                display: none;
+                text-align: center;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <video autoplay loop muted plays-inline class="back-vid">
+        <source src="galaxy.mp4" type="video/mp4">
+    </video>
+
+    <section class="main-section">
+        <nav>
+            <h1 data-aos="zoom-in" data-aos-duration="1000"><span style="color: #4acfee;">Port</span>folio</h1>
+
+            <div class="menu-toggle" id="menu-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+
+            <ul id="nav-list">
+                <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="#"
+                        onclick="showHome()">Home</a></li>
+                <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="#"
+                        onclick="showAbout()">About</a></li>
+                <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="#"
+                        onclick="showProjects()">Projects</a></li>
+                <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="#"
+                        onclick="showSkills()">Skills</a></li>
+                <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"><a href="#"
+                        onclick="showContact()">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Home Section -->
+        <div class="hero" id="home-section">
+            <div class="hero-info">
+                <h1 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="700">Hi, I'm Ramagiri Ranjith</h1>
+                <h2 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="900">I'm a Web Developer</h2>
+
+                <p data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1000">I’m a passionate full-stack web
+                    developer focused on building efficient, responsive, and user-friendly web applications. Let's build
+                    something great together!</p>
+
+                <div class="Buttons">
+                    <button class="btn" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="1100">Hire
+                        me</button>
+                </div>
+
+                <ul class="ul-icons" style="margin-top: 20px;" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="1200">
+                    <li style="display: inline-block; margin: 0 10px;"><a href="#"><i class='bx bxl-github'></i></a>
+                    </li>
+                    <li style="display: inline-block; margin: 0 10px;"><a href="#"><i class='bx bxl-twitter'></i></a>
+                    </li>
+                    <li style="display: inline-block; margin: 0 10px;"><a href="#"><i class='bx bxl-youtube'></i></a>
+                    </li>
+                    <li style="display: inline-block; margin: 0 10px;"><a href="#"><i
+                                class='bx bxl-facebook-circle'></i></a></li>
+                </ul>
+            </div>
+
+            <div class="hero-img" data-aos="zoom-in-left" data-aos-duration="2500">
+                <img src="man1.png" alt="person-img">
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <section id="about-section" class="about-section" style="color: white; padding: 20px 20px; display: none;">
+            <div class="container" data-aos="fade-up" data-aos-duration="1000">
+                <h2 style="font-size: 2rem; color: #4acfee; text-align: center; margin-bottom: 20px;">About Myself</h2>
+                <p style="max-width: 800px; margin: 0 auto; line-height: 1.8; font-size: 1.1rem;">
+                    My name is <strong>Ramagiri Ranjith</strong>. I have graduated from <strong>Saveetha School of
+                        Engineering, Chennai</strong> with a <strong>7.7 CGPA</strong>.
+                    I completed my intermediate in <strong>Sri Chaitanya Junior College</strong> and my 10th grade in
+                    <strong>Krishnaveni High School</strong>.
+                    <br><br>
+                    My <strong>long-term goal</strong> is to secure a good position in a top MNC, while my
+                    <strong>short-term goal</strong> is to be financially independent.
+                    <br><br>
+                    My hobbies include <strong>playing cricket</strong> and <strong>going to the gym</strong>.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects-section" class="about-section" style="display: none; color: white; padding: 20px 20px;">
+            <div class="container" data-aos="fade-up" data-aos-duration="1000">
+                <h2 style="font-size: 2rem; color: #4acfee; text-align: center; margin-bottom: 30px;">Projects</h2>
+
+                <!-- Freelance Projects -->
+                <div style="margin-bottom: 40px;">
+                    <h3 style="font-size: 1.5rem; color: #ffffff; margin-bottom: 15px;">Freelance Projects</h3>
+                    <div style="background-color: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 10px;">
+                        <h4 style="color: #4acfee;">SalesPulse</h4>
+                        <p style="line-height: 1.7;">
+                            Implementing responsive and user-friendly UI components to enhance user experience.
+                            Optimizing website performance and ensuring cross-browser compatibility.
+                            Integrating APIs and backend services for seamless data communication.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Academic Projects -->
+                <div>
+                    <h3 style="font-size: 1.5rem; color: #ffffff; margin-bottom: 15px;">Academic Projects</h3>
+                    <div style="background-color: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 10px;">
+                        <h4 style="color: #4acfee;">Project Title</h4>
+                        <p style="line-height: 1.7;">
+                            Project description goes here. You can add your academic project name and explanation here.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Skills Section -->
+        <section id="skills-section" class="about-section" style="display: none; color: white; padding: 0px 20px;">
+            <div class="container" data-aos="fade-up" data-aos-duration="1000">
+                <h2 style="font-size: 2rem; color: #4acfee; text-align: center; margin-bottom: 10px;">Skills</h2>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px;">
+                    <!-- Skill Boxes -->
+                    <div style="background-color: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px;">
+                        <h3 style="color: #4acfee;">HTML</h3>
+                        <p style="font-size: 15px;">Markup language for creating the structure of web pages using
+                            elements and tags.</p>
+                    </div>
+                    <div style="background-color: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px;">
+                        <h3 style="color: #4acfee;">CSS</h3>
+                        <p style="font-size: 15px;">Used for styling and designing the layout, colors, and fonts of web
+                            pages.</p>
+                    </div>
+                    <div style="background-color: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px;">
+                        <h3 style="color: #4acfee;">Bootstrap</h3>
+                        <p style="font-size: 15px;">Popular front-end framework for building responsive and mobile-first
+                            websites.</p>
+                    </div>
+                    <div style="background-color: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px;">
+                        <h3 style="color: #4acfee;">JavaScript</h3>
+                        <p style="font-size: 15px;">Programming language for adding interactivity and logic to websites.
+                        </p>
+                    </div>
+                    <div style="background-color: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px;">
+                        <h3 style="color: #4acfee;">MySQL</h3>
+                        <p style="font-size: 15px;">Relational database management system for storing and managing data.
+                        </p>
+                    </div>
+                    <div style="background-color: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px;">
+                        <h3 style="color: #4acfee;">Java</h3>
+                        <p style="font-size: 15px;">Object-oriented programming language widely used for backend
+                            development.</p>
+                    </div>
+                    <div style="background-color: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px;">
+                        <h3 style="color: #4acfee;">Python</h3>
+                        <p style="font-size: 15px;">High-level programming language known for readability and
+                            versatility.</p>
+                    </div>
+                    <div style="background-color: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px;">
+                        <h3 style="color: #4acfee;">SpringBoot</h3>
+                        <p style="font-size: 15px;">Framework used for building production-ready Java-based web
+                            applications.</p>
+                    </div>
+                    <div style="background-color: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px;">
+                        <h3 style="color: #4acfee;">React</h3>
+                        <p style="font-size: 15px;">JavaScript library for building user interfaces and single-page
+                            applications.</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+        <!-- Contact Section -->
+        <section id="contact-section" style="display: none; color: white; padding: 20px 20px;">
+            <div class="container" data-aos="fade-up" data-aos-duration="1000">
+                <h2 style="font-size: 2rem; color: #4acfee; text-align: center; margin-bottom: 30px;">Contact</h2>
+                <div class="contact-container">
+                    <div class="contact-info" style="color: #ffffff; padding: 20px 30px;">
+                        <p><strong>Email:</strong><br>naniranjith720@gmail.com</p>
+                        <p><strong>Phone:</strong><br>8919531591</p>
+                        <ul class="ul-icons" style="margin-top: 20px;" data-aos="fade-up" data-aos-duration="1000"
+                        data-aos-delay="1200">
+                        <li style="display: inline-block; margin: 0 10px;"><a href="#"><i class='bx bxl-github'></i></a>
+                        </li>
+                        <li style="display: inline-block; margin: 0 10px;"><a href="#"><i class='bx bxl-twitter'></i></a>
+                        </li>
+                        <li style="display: inline-block; margin: 0 10px;"><a href="#"><i class='bx bxl-youtube'></i></a>
+                        </li>
+                        <li style="display: inline-block; margin: 0 10px;"><a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                        </li>
+                    </ul>
+                    </div>
+            
+                    
+                    <!-- <form class="contact-form">
+                        <input type="text" placeholder="Name" required>
+                        <input type="email" placeholder="Email" required>
+                        <textarea rows="4" placeholder="Message" required></textarea>
+                        <button type="submit" class="btn">Send</button>
+                    </form> -->
+            
+                    <form style="max-width: 600px; margin: auto;">
+                        <input type="text" name="from_name" placeholder="Your Name" required
+                            style="width: 100%; padding: 10px; margin: 10px 0;">
+                        <input type="email" name="from_email" placeholder="Your Email" required
+                            style="width: 100%; padding: 10px; margin: 10px 0;">
+                        <textarea name="message" placeholder="Your Message" rows="5" required
+                            style="width: 100%; padding: 10px; margin: 10px 0;"></textarea>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+               
+                <p id="response-message"></p>
+            </div>
+        </section>
+
+
+
+    </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        const toggleBtn = document.getElementById('menu-toggle');
+        const navList = document.getElementById('nav-list');
+
+        toggleBtn.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
+
+        function showAbout() {
+        hideAllSections();
+        document.getElementById('about-section').style.display = 'block';
+    }
+
+        function showHome() {
+            hideAllSections();
+            document.getElementById('home-section').style.display = 'flex';
+        }
+        function showProjects() {
+        hideAllSections();
+        document.getElementById('projects-section').style.display = 'block';
+    }
+
+    function showSkills() {
+        hideAllSections();
+        document.getElementById('skills-section').style.display = 'block';
+    }
+    function showContact() {
+        hideAllSections();
+        document.getElementById('contact-section').style.display = 'block';
+    }
+    function hideAllSections() {
+        document.getElementById('home-section').style.display = 'none';
+        document.getElementById('about-section').style.display = 'none';
+        document.getElementById('projects-section').style.display = 'none';
+        document.getElementById('skills-section').style.display = 'none';
+        document.getElementById('contact-section').style.display = 'none';
+    }
+
+    window.onload = showHome;
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("S-eE5I_JB1yuZ2w43"); // Your public key
+        })();
+
+        document.getElementById('contact-section').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            emailjs.sendForm('service_5sqojzi', 'template_jilxct2', this)
+                .then(function () {
+                    document.getElementById('response-message').textContent = "✅ Message sent successfully!";
+                }, function (error) {
+                    document.getElementById('response-message').textContent = "❌ Failed to send message. Try again.";
+                    console.error('FAILED...', error);
+                });
+
+            this.reset();
+        });
+    </script>
+
+</body>
+
+</html>
